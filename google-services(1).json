@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "731152495234",
+    "firebase_url": "https://zooroo-5d24e.firebaseio.com",
+    "project_id": "zooroo-5d24e",
+    "storage_bucket": "zooroo-5d24e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731152495234:android:8d89f74e8a8b1174",
+        "android_client_info": {
+          "package_name": "com.example.admin.zooroo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731152495234-4jkamnu14uv1l77tn0kb4rdedc3gn5ma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.zooroo",
+            "certificate_hash": "7713de7d57a3d6153934ae32a87a8fd793b3f18c"
+          }
+        },
+        {
+          "client_id": "731152495234-3uftnpi7m1fcvkqkbc8u65grrdv2i4rr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwguEYZmUb_hlegfZ02dUP1DsmPfD1F8Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731152495234-3uftnpi7m1fcvkqkbc8u65grrdv2i4rr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
