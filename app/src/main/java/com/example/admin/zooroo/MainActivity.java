@@ -1,11 +1,16 @@
 package com.example.admin.zooroo;
 
+import android.R.anim;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -15,15 +20,32 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editText;
     FirebaseApp firebaseApp;
+    ViewFlipper vflipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int images[] = {R.drawable.s1 , R.drawable.s2 , R.drawable.s3};
+
+        vflipper = findViewById(R.id.vflipper);
 
         editText = findViewById(R.id.editTextPhone);
 
+        for(int image: images)
+        {
+            flipperImages(image);
+        }
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        try{
+            this.getSupportActionBar().hide();
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(getApplicationContext(), ""+e, Toast.LENGTH_LONG).show();
+        }
 
 
         findViewById(R.id.buttonContinue).setOnClickListener(new View.OnClickListener() {
@@ -47,6 +69,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public  void flipperImages(int image)
+    {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        vflipper.addView(imageView);
+        vflipper.setFlipInterval(4000);
+        vflipper.setAutoStart(true);
+
+        vflipper.setInAnimation(this, anim.slide_in_left);
+        vflipper.setOutAnimation(this, anim.slide_out_right);
     }
 
     @Override
