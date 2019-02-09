@@ -38,16 +38,6 @@ public class MainActivity extends AppCompatActivity {
             flipperImages(image);
         }
 
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        try{
-            this.getSupportActionBar().hide();
-        }
-        catch (Exception e)
-        {
-            Toast.makeText(getApplicationContext(), ""+e, Toast.LENGTH_LONG).show();
-        }
-
-
         findViewById(R.id.buttonContinue).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,17 +61,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public  void flipperImages(int image)
-    {
-        ImageView imageView = new ImageView(this);
-        imageView.setBackgroundResource(image);
-        vflipper.addView(imageView);
-        vflipper.setFlipInterval(4000);
-        vflipper.setAutoStart(true);
-
-        vflipper.setInAnimation(this, anim.slide_in_left);
-        vflipper.setOutAnimation(this, anim.slide_out_right);
-    }
 
     @Override
     protected void onStart() {
@@ -93,5 +72,18 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(intent);
         }
+    }
+
+
+    public  void flipperImages(int image)
+    {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        vflipper.addView(imageView);
+        vflipper.setFlipInterval(4000);
+        vflipper.setAutoStart(true);
+
+        vflipper.setInAnimation(this, anim.slide_in_left);
+        vflipper.setOutAnimation(this, anim.slide_out_right);
     }
 }

@@ -12,30 +12,26 @@
         android:layout_centerHorizontal="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"/>
 
-    </ViewFlipper>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="222dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="346dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="500dp"
-        android:text="ZOOROO"
-        android:textColor="#fff"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
+        app:srcCompat="@drawable/l1" />
+
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -43,42 +39,48 @@
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="500dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
         android:layout_weight="2"
         android:autofillHints=""
-        android:background="#11100000"
+        android:background="@drawable/editext1"
         android:digits="0123456789"
-        android:hint="Enter Your Number"
+        android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+        android:hint=" Mobile Number"
+        android:imeOptions="actionDone"
         android:inputType="phone"
-        android:maxLength="10"
+        android:maxLength="12"
+        android:paddingLeft="15dp"
         android:textColor="#fff"
         android:textColorHint="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/buttonContinue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 
     <Button
         android:id="@+id/buttonContinue"
-        android:layout_width="151dp"
-        android:layout_height="41dp"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
         android:layout_below="@+id/editTextPhone"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/colorPrimary"
-        android:text="Continue"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/button1"
+        android:text="->"
         android:textAllCaps="false"
         android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

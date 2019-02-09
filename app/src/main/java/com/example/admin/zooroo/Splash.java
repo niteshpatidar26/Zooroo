@@ -16,15 +16,6 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        try{
-            this.getSupportActionBar().hide();
-        }
-        catch (Exception e)
-        {
-            Toast.makeText(getApplicationContext(), ""+e, Toast.LENGTH_LONG).show();
-        }
-
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -35,6 +26,6 @@ public class Splash extends AppCompatActivity {
                 finish();
 
             }
-        },3000);
+        },2000);
     }
 }
